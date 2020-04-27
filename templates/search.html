@@ -1,0 +1,23 @@
+$def with (searchinput)
+
+
+<div class="card text-center card-body">
+  <div class="card-header">
+    <H1>News Sources</H1>
+  </div>
+</div>
+<div class="card-columns">
+$for x in searchinput:
+  <div class="card">
+    <blockquote class="blockquote mb-0 card-body bg-dark text-white text-center">
+      <p>$x.source</p>
+    </blockquote>
+    <a href="$x.url"><img class="card-img-top" src="$x.imgsrc" alt="$x.imgsrc"></a>
+    <div class="card-body">
+      <h5 class="card-title"><a href="$x.url" class="text-dark">$x.title</a></h5>
+      <p class="card-text">$x.description</p>
+      <a href="$x.url" class="btn btn-primary">Go to article</a>
+      <p class="card-text"><small class="text-muted">$x.pubdate</small></p>
+    </div>
+  </div>
+</div>

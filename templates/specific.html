@@ -1,0 +1,20 @@
+$def with (specsource)
+
+
+
+<div class="card-columns">
+$for x in specsource:
+  <div class="card">
+    <img src="$x.iconURL" class="rounded float-left" alt="" style="height: 86px;">
+    <blockquote class="blockquote mb-0 card-body bg-light text-dark text-center">
+      <p>$x.source</p>
+    </blockquote>
+    <a href="$x.url"><img class="card-img-top" src="$x.imgsrc" alt="$x.imgsrc"></a>
+    <div class="card-body">
+      <h5 class="card-title"><a href="$x.url" class="text-dark">$x.title</a></h5>
+      <p class="card-text">$x.description</p>
+      <a href="$x.url" class="btn btn-primary">Go to article</a>
+      <p class="card-text"><small class="text-muted">$x.pubdate</small></p>
+    </div>
+  </div>
+</div>

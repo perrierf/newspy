@@ -1,0 +1,18 @@
+$def with (article)
+
+<div class="card text-center card-body">
+  <div class="card-header">
+		<H1>News Sources</H1>
+  </div>
+</div>
+
+
+<div class="card-columns">
+$for specarticle in article:
+	<div class="card bg-light d-flex">
+		<img src="$specarticle.iconURL" class="rounded float-left" alt="" style="height: 112px;">
+		<div class="card-body align-items-center d-flex justify-content-center">
+    		<a href="/specific/$specarticle.source" class="text-dark">$specarticle.source</a>
+    	</div>
+    </div>
+</div>
