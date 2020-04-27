@@ -1,6 +1,6 @@
 import web, datetime
 
-db = web.database(dbn='mysql', host='localhost', database='newspy', user='root', password='Fadges12')
+db = web.database(dbn='mysql', host='localhost', database='newspy', user='', password='')
 
 def get_articles():
     return db.query("select distinct source, iconURL from articles where source is not null order by source")
